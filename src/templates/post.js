@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
 
-const BlogPost = ({data, location}) => {
+const BlogPost = ({location, data}) => {
     const post = data.wpPost
     return(
         <Layout location={location}>

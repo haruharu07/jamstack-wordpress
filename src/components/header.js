@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const Header = ({location}) => {
 
     const rootPath = `${__PATH_PREFIX__}/`
+
     const logoLink = (
         <Link to="/">
             Jamstack WordPress

@@ -4,8 +4,8 @@ import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 import Header from "./header"
 
-const Layout = props => {
-    const { location, children } = props
+const Layout = ({children, location}) => {
+
     return (
         <ThemeProvider theme={theme}>
         <>
