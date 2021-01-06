@@ -28,7 +28,7 @@ const globalStyle = createGlobalStyle`
         font-size : 62.5%;
     }
     body {
-        font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont,'Yu Gothic', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', Arial,'Helvetica Neue','メイリオ', 'Meiryo',sans-serif;
+        font-family: 'Roboto', -apple-system, BlinkMacSystemFont,'Yu Gothic', YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', Arial,'Helvetica Neue','メイリオ', 'Meiryo',sans-serif;
         font-size: 1.6rem;
         line-height: 1.75;
         background-color: ${props => props.theme.colors.background};
@@ -53,8 +53,8 @@ const globalStyle = createGlobalStyle`
         color: inherit;
         outline-color: #111;
         :hover {
-            color: ${props => props.theme.colors.highlight};
-            transition: all .5s;
+            opacity: .9;
+            transition: all .3s;
             outline: none;
         }
     }

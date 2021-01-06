@@ -9,6 +9,7 @@ exports.createPages = async ({ actions, graphql }) => {
                     node {
                         title
                         uri
+                        id
                     }
                 }
             }
@@ -25,7 +26,7 @@ exports.createPages = async ({ actions, graphql }) => {
         path: `blog${post.node.uri}`,
         component: path.resolve(`./src/templates/post.js`),
         context: {
-                slug: post.node.uri,
+                id: post.node.id,
             },
         })
     })
@@ -37,48 +38,3 @@ exports.createPages = async ({ actions, graphql }) => {
     });
 
 }
-
-
-
-
-// const path = require(`path`)
-
-// exports.createPages = ({ graphql, actions }) => {
-//     const { createPage } = actions
-
-//     return graphql(
-//     `
-//         {
-//             allWpPost {
-//                 edges {
-//                     node {
-//                         title
-//                         uri
-//                     }
-//                 }
-//             }
-//         }
-//     `
-//     )
-
-//     // Create post pages.
-//     const posts = result.data.allWpPost.edges
-
-//     posts.forEach((post) => {
-//         createPage({
-//         path: `/${post.node.uri}`,
-//         component: path.resolve(`./src/templates/post.js`),
-//         context: {
-//                 slug: post.node.uri,
-//             },
-//         })
-//     })
-
-// }
-
-
-// // Create post list pages.
-// createPage({
-//     path: `/`,
-//     component: path.resolve(`./src/templates/post-list.js`),
-// });
