@@ -20,7 +20,7 @@ const PostCard = ({node}) => {
                 )}
                 <CardTitle className="card-title">{node.title}</CardTitle>
                 <CardText
-                    dangerouslySetInnerHTML={{ __html: node.content }}
+                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
                 />
                 <CardDate>{node.date}</CardDate>
             </Link>
@@ -62,11 +62,13 @@ const CardTitle = styled.h2`
 `
 
 const CardText = styled.div`
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-bottom: 18px;
+    p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-bottom: 18px;
+    }
     .more-link {
         display: none;
     }

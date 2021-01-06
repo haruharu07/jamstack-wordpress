@@ -56,7 +56,7 @@ export const query = graphql`
                     title
                     date(formatString: "ll")
                     uri
-                    content
+                    excerpt
                     featuredImage {
                         node {
                             localFile {
